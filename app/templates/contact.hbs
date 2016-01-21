@@ -8,6 +8,9 @@
       <li>{{#link-to 'contact.phone'}}Phone{{/link-to}}</li>
       <li>{{#link-to 'contact.email'}}Email{{/link-to}}</li>
     </ul>
+    <p>
+      Or, <a href="#" {{ action 'sendMessage' }}>click here</a> to send a secret message
+    </p>
   </div>
   <div class="col-md-6">
     {{outlet}}
