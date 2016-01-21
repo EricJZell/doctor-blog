@@ -3,16 +3,20 @@
   Want to get in touch?
 </p>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <ul>
       <li>{{#link-to 'contact.phone'}}Phone{{/link-to}}</li>
       <li>{{#link-to 'contact.email'}}Email{{/link-to}}</li>
     </ul>
     <p>
-      Or, <a href="#" {{ action 'sendMessage' }}>click here</a> to send a secret message
+      {{#if messageSent}}
+        Thank you, your message has been sent. Your confirmation number is {{confirmationNumber}}
+      {{else}}
+        Or, <a href="#" {{ action 'sendMessage' }}>click here</a> to send a secret message
+      {{/if}}
     </p>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     {{outlet}}
   </div>
 </div>
